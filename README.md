@@ -4,7 +4,7 @@
 This project includes an implementation of a simple rule engine that determines whether a person qualifies for a given product and sets the interest rate and disqualification status for the person based on predefined rules. The rulebase is designed to be easily updated, with rules defined and implemented separately from the code that executes them.
 
 ## Instructions
-The code is written in Python (Python 3) and can be run from the command line. See **Contents** section for details.
+The code is written in Python (Python 3) and can be run from the command line. To add new rules, update the file ***JSON_Rules.json:***  using the format for existing rules. See **Contents** section for details.
 
 ## Contents
 ***visio_utils.py:*** This file contains helper functions such as operators and functions that enable comparisons
