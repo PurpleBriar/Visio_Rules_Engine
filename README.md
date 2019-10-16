@@ -8,10 +8,15 @@ The code is written in Python (Python 3) and can be run from the command line.
 
 ## Contents
 ***visio_utils.py:*** This file contains helper functions such as operators and functions that enable comparisons
+
 ***test_visio_utils.py:*** This file contains the unit tests for functions defined in ***visio_utils.py:***. It can be run from the command line using the command ***python -m unittest visio_utils.py:***
+
 ***visio_classes.py:*** This file contains the class definitions for classes that enable rule implementation and execution. Classes defined here are: Person, Product, Condition, Action, Rule, RulesEngine.
+
 ***test_visio_classes.py:*** This file contains the unit tests for functions defined in ***visio_classes.py:***. It can be run from the command line using the command ***python -m unittest visio_classes.py:***
+
 ***Rules.py:*** This file includes the definition of the function ***loadRules***, which loads rules defined in the file ***JSON_Rules.json:***. Several sample class instances are defined in this file to showcase rule implementation and execution. The file can be run from the command line using the command ***python Rules.py***
+
 ***JSON_Rules.json:*** This file contains rules stored in ***json*** format. Rules match a set of conditions with an action and are defined as data structures that include a name (as a string), a set of conditions (as a list of data structures), and an action (as a single data structure). An example is shown below:
 ```
             "rule_name": "Disqualify Florida Applicants", 
