@@ -11,7 +11,7 @@ The code is written in Python (Python 3) and can be run from the command line. T
 
 ***test_visio_utils.py:*** This file contains the unit tests for functions defined in ***visio_utils.py***. It can be run from the command line using the command ***python -m unittest visio_utils.py***
 
-***visio_classes.py:*** This file contains the class definitions for classes that enable rule implementation and execution. Classes defined here are: Person, Product, Condition, Action, Rule, RulesEngine.
+***visio_classes.py:*** This file contains the class definitions for classes that enable rule implementation and execution. Classes defined here are: ***Person***, ***Product***, ***Condition***, ***Action***, ***Rule***, and ***RulesEngine***.
 
 ***test_visio_classes.py:*** This file contains the unit tests for class methods defined in ***visio_classes.py***. It can be run from the command line using the command ***python -m unittest visio_classes.py***
 
