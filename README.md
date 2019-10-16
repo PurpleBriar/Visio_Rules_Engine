@@ -1,19 +1,40 @@
 # Visio_Rules_Engine
 
 ## Overview
-This project includes an implementation of a simple rule engine that determines whether a person qualifies for a given product and sets an interest rate for the person based on predefined rules. The rulebase is designed to be easily updated, with rules defined and implemented separately from the code that executes them.
-
-## Contents
-The rules are declared as rows in a csv file with the columns defined as follows:
-- 1: rule index (unique identifier)
-- 2: rule condition input (value of property that triggers rule)
-- 3: rule action (adjustment made to a specific property when rule fires)
-- 4: rule description (text description of rule)
-
-All classes are defined in ***RulesEngine.py***, while rules are declared as rows in ***Rule_definitions.txt***, which can be easily updated without updating the rule execution code. Several tests have been included in the ***RulesEngine.py*** file to handle expected uses and incorrect inputs.
+This project includes an implementation of a simple rule engine that determines whether a person qualifies for a given product and sets the interest rate and disqualification status for the person based on predefined rules. The rulebase is designed to be easily updated, with rules defined and implemented separately from the code that executes them.
 
 ## Instructions
-The code is written in Python (Python 3) and can be run fron the command line using the command ***python RulesEngine.py***. 
+The code is written in Python (Python 3) and can be run from the command line. 
+
+## Contents
+***visio_utils.py:*** This file contains helper functions such as operators and functions that enable comparisons
+***test_visio_utils.py:*** This file contains the unit tests for functions defined in ***visio_utils.py:***. It can be run from the command line using the command ***python -m unittest visio_utils.py:***
+***visio_classes.py:*** This file contains the class definitions for classes that enable rule implementation and execution. Classes defined here are: Person, Product, Condition, Action, Rule, RulesEngine.
+***test_visio_classes.py:*** This file contains the unit tests for functions defined in ***visio_classes.py:***. It can be run from the command line using the command ***python -m unittest visio_classes.py:***
+***Rules.py:*** This file includes the definition of the function ***loadRules***, which loads rules defined in the file ***JSON_Rules.json:***. Several sample class instances are defined in this file to showcase rule implementation and execution. The file can be run from the command line using the command ***python Rules.py***
+***JSON_Rules.json:*** This file contains rules stored in ***json*** format. Rules match a set of conditions with an action and are defined as data structures that include a name (as a string), a set of conditions (as a list of data structures), and an action (as a single data structure). An example is shown below:
+```
+            "rule_name": "Disqualify Florida Applicants", 
+
+            "rule_conditions": 
+            [
+                {
+                    "subject_type": "Person", 
+                    "subject_attribute": "state", 
+                    "attribute_type": "STRING", 
+                    "check": "isEqualTo",
+                    "ref_value": "Florida"
+                }
+            ], 
+
+            "rule_action": 
+            {
+                "operator": "setEqualTo", 
+                "property_to_update": "disqualified", 
+                "property_type": "BOOLEAN", 
+                "property_value": true
+            }
+```
 
 ## Problem Statement
 
