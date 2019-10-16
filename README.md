@@ -13,7 +13,7 @@ The code is written in Python (Python 3) and can be run from the command line. S
 
 ***visio_classes.py:*** This file contains the class definitions for classes that enable rule implementation and execution. Classes defined here are: Person, Product, Condition, Action, Rule, RulesEngine.
 
-***test_visio_classes.py:*** This file contains the unit tests for functions defined in ***visio_classes.py:***. It can be run from the command line using the command ***python -m unittest visio_classes.py:***
+***test_visio_classes.py:*** This file contains the unit tests for class methods defined in ***visio_classes.py:***. It can be run from the command line using the command ***python -m unittest visio_classes.py:***
 
 ***Rules.py:*** This file includes the definition of the function ***loadRules***, which loads rules defined in the file ***JSON_Rules.json:***. Several sample class instances are defined in this file to showcase rule implementation and execution. The file can be run from the command line using the command ***python Rules.py***
 
