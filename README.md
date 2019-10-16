@@ -4,7 +4,7 @@
 This project includes an implementation of a simple rule engine that determines whether a person qualifies for a given product and sets the interest rate and disqualification status for the person based on predefined rules. The rulebase is designed to be easily updated, with rules defined and implemented separately from the code that executes them.
 
 ## Instructions
-The code is written in Python (Python 3) and can be run from the command line. 
+The code is written in Python (Python 3) and can be run from the command line. See **Contents** section for details.
 
 ## Contents
 ***visio_utils.py:*** This file contains helper functions such as operators and functions that enable comparisons
@@ -17,8 +17,10 @@ The code is written in Python (Python 3) and can be run from the command line.
 
 ***Rules.py:*** This file includes the definition of the function ***loadRules***, which loads rules defined in the file ***JSON_Rules.json:***. Several sample class instances are defined in this file to showcase rule implementation and execution. The file can be run from the command line using the command ***python Rules.py***
 
-***JSON_Rules.json:*** This file contains rules stored in ***json*** format. Rules match a set of conditions with an action and are defined as data structures that include a name (as a string), a set of conditions (as a list of data structures), and an action (as a single data structure). An example is shown below:
+***JSON_Rules.json:*** This file contains rules stored in ***json*** format. Rules match a set of conditions with an action and are defined as dictionaries that include a name (as a string), a set of conditions (as a list of dictionaries), and an action (as a single dictionary). An example is shown below:
+
 ```
+        {   
             "rule_name": "Disqualify Florida Applicants", 
 
             "rule_conditions": 
@@ -39,6 +41,7 @@ The code is written in Python (Python 3) and can be run from the command line.
                 "property_type": "BOOLEAN", 
                 "property_value": true
             }
+        }
 ```
 
 ## Problem Statement
